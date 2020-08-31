@@ -38,7 +38,7 @@ window.Echo = new Echo({
     key: process.env.MIX_PUSHER_APP_KEY
 });
 
-window.Echo.private('DemoChannel')
+window.Echo.private(''App.User.' + lagay_mo_dito_ung_id_ng_logged_in_user)
 .listen('WebsocketChatEvent', (e) => {
     console.log(e)
 })
