@@ -20,10 +20,10 @@ Auth::routes();
 //     return new NewUserWelcomeMail();
 // });
 
-Route::get('/message', function () {
-    broadcast(new WebsocketChatEvent('some data'));
-    return view('message.index');
-});
+// Route::get('/message', function () {
+//     broadcast(new WebsocketChatEvent('some data'));
+//     return view('message.index');
+// });
 
 Route::post('/follow/{user}', 'FollowsController@store');
 

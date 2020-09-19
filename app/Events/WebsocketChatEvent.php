@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -14,16 +15,16 @@ class WebsocketChatEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $somedata;
+    public $user;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($somedata)
+    public function __construct(User $user)
     {
         //
-        $this->somedata = $somedata;
+        $this->user = $user;
     }
 
     /**
@@ -33,6 +34,6 @@ class WebsocketChatEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('DemoChannel');
+        return new PrivateChannel('message.'.$this->user->id);
     }
 }

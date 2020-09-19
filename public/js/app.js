@@ -56975,8 +56975,12 @@ window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/d
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: "50208cb048089c8293eb"
-});
-window.Echo["private"]('DemoChannel').listen('WebsocketChatEvent', function (e) {
+}); // window.Echo.private('App.User.' + lagay_mo_dito_ung_id_ng_logged_in_user)
+// .listen('WebsocketChatEvent', (e) => {
+//     console.log(e)
+// })
+
+window.Echo["private"]('message.index').listen('WebsocketChatEvent', function (e) {
   console.log(e);
 }); // import Echo from 'laravel-echo';
 // window.Pusher = require('pusher-js');
