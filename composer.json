@@ -16,6 +16,7 @@
         "laravel/framework": "^7.0",
         "laravel/telescope": "^3.5",
         "laravel/tinker": "^2.0",
+        "phpseclib/bcmath_compat": "^2.0",
         "pusher/pusher-php-server": "~3.0"
     },
     "require-dev": {
