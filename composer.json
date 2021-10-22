@@ -8,16 +8,14 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5",
+        "php": "8.0.12",
         "beyondcode/laravel-websockets": "^1.6",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
-        "laravel/telescope": "^3.5",
         "laravel/tinker": "^2.0",
-        "phpseclib/bcmath_compat": "^2.0",
-        "pusher/pusher-php-server": "~3.0"
+        "phpseclib/bcmath_compat": "^2.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -34,7 +32,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": ["laravel/telescope"]
+            "dont-discover": [""]
         }
     },
     "autoload": {
